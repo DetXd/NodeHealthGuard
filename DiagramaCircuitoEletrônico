@@ -1,0 +1,31 @@
+#Diagrama do Circuito Eletrônico:
+
+                      +------------------+
+                      |   Sensor ECG     |
+                      |                  |
+                      |                  |
+                      +--------+---------+
+                               |
+                               | Sinal Analógico
+                               |
+                      +--------v---------+                        +------------------+
+                      |   NodeMCU ESP8266|     Sinal Analógico    |   LCD 16X2 I2C   |
+                      |                  | - - - - - - - - - - - >|                  |
+                      |                  |                        |                  |
+                      +--------+---------+                        +------------------+
+                               |
+                               | Comunicação Wi-Fi
+                               |
+                      +--------v---------+
+                      |   Servidor MQTT  |
+                      |                  |
+                      |                  |
+                      +--------+---------+
+                               |
+                               | Dados do ritmo cardíaco
+                               |
+                      +--------v---------+
+                      |   Aplicativo de  |
+                      |   Monitoramento  |
+                      |                  |
+                      +------------------+
