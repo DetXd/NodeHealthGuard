@@ -29,3 +29,21 @@
                       |   Monitoramento  |
                       |                  |
                       +------------------+
+
+
+#Fluxo de Dados:
+
+1 - O Sensor ECG mede a atividade elétrica do coração e gera um sinal analógico proporcional aos batimentos cardíacos.
+2 - O NodeMCU ESP8266 lê o sinal analógico do sensor ECG através de uma entrada analógica.
+3 - O ESP8266 converte os dados lidos em batimentos cardíacos por minuto (BPM) ou outro formato adequado para exibição no LCD 16X2 I2C.
+4 - O NodeMCU se conecta a uma rede Wi-Fi local.
+5 - O NodeMCU estabelece uma conexão com um servidor MQTT hospedado na nuvem.
+6 - Os dados do ritmo cardíaco são publicados no servidor MQTT em um tópico específico.
+7 - O servidor MQTT distribui os dados do ritmo cardíaco para todos os clientes inscritos nesse tópico.
+8 - Um aplicativo de monitoramento, inscrito no tópico relevante, recebe os dados do ritmo cardíaco e exibe as leituras em tempo real para o usuário.
+
+#Arquitetura Geral:
+
+A arquitetura geral do sistema é baseada em uma abordagem cliente-servidor, onde o NodeMCU ESP8266 atua como cliente e o servidor MQTT atua como 
+intermediário para distribuir os dados do ritmo cardíaco para os clientes inscritos. O aplicativo de monitoramento é um exemplo de cliente que 
+consome os dados do servidor MQTT e os apresenta de forma amigável para o usuário final.
