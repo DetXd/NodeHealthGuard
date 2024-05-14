@@ -30,6 +30,11 @@ prematura e para o acesso universal aos serviços de saúde.
 4 - Jumpers
 5 - breadboard
 
+Software utilizado:
+
+1 - Arduino IDE
+2 - Servidor MQTT ubidots
+
 =========================== Funcionamento =================================
 
 O protótipo consiste em um sistema que monitora o ritmo cardíaco de uma pessoa usando um sensor ECG 
