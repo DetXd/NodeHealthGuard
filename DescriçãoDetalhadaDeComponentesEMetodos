@@ -1,0 +1,90 @@
+No contexto de um mundo cada vez mais digitalizado, a interseção entre tecnologia e saúde tem desempenhado
+um papel crucial na busca por soluções inovadoras para monitoramento e resposta a emergências médicas. 
+Nesse cenário, surge o projeto "Node HealthGuard", uma iniciativa voltada para o desenvolvimento de um 
+sistema de alerta precoce para emergências médica, utilizando o NodeMCU ESP8266 com a tecnologia 
+de comunicação MQTT via WiFi.
+
+O NodeMCU ESP8266 é baseado no chip ESP8266, que possui um processador Tensilica L106 de 32 bits, suporta 
+comunicação WiFi 802.11 b/g/n e pode ser programado usando a linguagem Lua ou a Arduino IDE . Podendo ser 
+programado usando a Arduino IDE, uma plataforma de desenvolvimento 
+gratuita e de código aberto baseada na linguagem de programação Wiring.
+
+A IDE inclui uma vasta biblioteca de exemplos e recursos para simplificar o processo de desenvolvimento de projetos.
+Características Principais da Arduino IDE:
+A Arduino IDE possui um editor de código simples e fácil de usar, com recursos básicos de edição como destaque de sintaxe,
+recuo automático e autocompletar.
+Ele é projetado para ser amigável para iniciantes, permitindo que usuários de todos os níveis de habilidade escrevam e editem
+código facilmente.
+A IDE inclui um compilador integrado que traduz o código escrito na linguagem de programação Arduino (baseada em C/C++) para
+linguagem de máquina compreensível pelo microcontrolador.
+A interface da Arduino IDE é simples e intuitiva, com menus e barras de ferramentas organizados de forma lógica para facilitar
+o acesso às funcionalidades principais.
+Ele também inclui recursos adicionais, como uma janela de serial monitor para depurar comunicação serial e uma janela de console
+para exibir mensagens de status.
+A IDE facilita o processo de upload de código para placas Arduino, com suporte para uma variedade de modelos e configurações.
+Além disso, ela oferece ferramentas de depuração básicas, como monitor serial e log de saída, para ajudar os desenvolvedores a 
+entenderem o comportamento do código em tempo de execução.
+Também a fácil inclusão de bibliotecas de terceiros para expandir as capacidades do Arduino, podendo ser adicionadas ao projeto 
+e usadas no código, proporcionando acesso a uma variedade de recursos e funcionalidades adicionais.
+
+O sensor utilizado para detectar os batimentos cardíacos é o módulo AD8232, ele é um dispositivo projetado especificamente
+para detectar sinais elétricos do coração humano, tornando-o ideal para a medição de batimentos cardíacos. Consistindo basicamente 
+em um chip de amplificação de sinal AD8232 da Analog Devices e componentes periféricos para facilitar a conexão e utilização com 
+microcontroladores como o Arduino.
+
+O AD8232 é um amplificador de sinal de ECG (Eletrocardiograma) altamente sensível, que possui circuitos internos que amplificam o
+sinal do ECG para torná-lo suficientemente forte para ser processado por microcontroladores o possibilitando detectar sinais 
+elétricos muito pequenos gerados pelo coração.
+Além disso possui filtros internos para reduzir o ruído e interferências elétricas que podem ser captadas pelo sensor, ajudando 
+a garantir que apenas os sinais elétricos relevantes do coração sejam amplificados e processados, melhorando a precisão da medição.
+
+Ele geralmente possui três pinos principais: um para alimentação (VCC), um para terra (GND) e um para o sinal de saída do ECG (OUT)
+O atuador utilizado e um Módulo Display LCD 16x2 com comunicação I2C, ele é responsáveis por fornecer feedback visual ao usuário, 
+indicando eventos importantes.
+
+O Módulo Display LCD 16x2 com comunicação I2C tem como principais características, um display LCD de 16 colunas e 
+2 linhas com luz de fundo azul e caracteres pretos. Comunicação de 4 e 8 bits de fácil integração com microcontroladores e 
+voltagem de 5V. Ele será responsável por exibir algumas informações como o ritmo de batimentos cardíaco e status da conexão 
+WiFi.
+
+Para permitir a conexão entre todos os componentes citados anteriormente, sendo eles sensores ou atuadores, será utilizado 
+jumpers e uma breadboard.
+
+Os jumpers, também conhecidos como fios de conexão ou cabos jumper, são pequenos fios condutores usados para fazer conexões 
+temporárias entre componentes eletrônicos, como placas de circuito impresso (PCBs), sensores, microcontroladores e outros dispositivos. 
+Eles são fundamentais para estabelecer conexões elétricas entre os diferentes elementos de um circuito, permitindo que os sinais 
+elétricos fluam adequadamente.
+
+Principais características dos jumpers:
+•	Flexibilidade: 
+o	Os jumpers são geralmente flexíveis e maleáveis, o que os torna fáceis de manusear e adaptar para diferentes configurações de circuito.
+•	Conectores:
+o	Muitos jumpers possuem conectores macho em ambas as extremidades, que podem ser inseridos em pinos de componentes eletrônicos ou conectores fêmea.
+o	Alguns jumpers possuem conectores fêmea em uma extremidade e macho na outra, permitindo conectar diretamente componentes a placas de circuito impresso ou breadboards.
+•	Cores Diferenciadas:
+o	Os jumpers frequentemente são vendidos em conjuntos com diferentes cores, o que facilita a organização e identificação das conexões em um circuito.
+•	Utilização:
+o	Eles são amplamente utilizados em prototipagem rápida e testes de circuitos, pois permitem estabelecer conexões temporárias sem a necessidade de soldagem.
+
+A breadboard, também conhecida como placa de prototipagem ou placa de ensaio, é uma placa de circuito sem solda que permite montar e testar circuitos eletrônicos 
+temporários de forma rápida e intuitiva. Ela é composta por uma matriz de furos condutores interligados, nos quais os componentes eletrônicos podem ser inseridos 
+e conectados entre si.
+Principais características da breadboard:
+•	Matriz de Furos:
+o	A breadboard possui uma matriz de furos condutores dispostos em linhas e colunas, que estão conectados internamente de acordo com um padrão pré-estabelecido.
+•	Trilhos de Alimentação:
+o	Geralmente, a breadboard possui trilhos de alimentação (power rails) nas extremidades, que estão conectados em série ao longo de toda a placa.
+o	Esses trilhos são utilizados para fornecer energia aos componentes do circuito, podendo ser conectados à fonte de alimentação do projeto, como o Arduino ou 
+uma bateria.
+•	Conexões Internas:
+o	Os furos condutores da breadboard estão interligados internamente em grupos de cinco, o que facilita a conexão de componentes entre si.
+o	Isso permite montar circuitos complexos de forma organizada e sem a necessidade de soldagem.
+•	Facilidade de Uso:
+o	A breadboard é uma ferramenta muito utilizada por sua facilidade de uso, permitindo montar e desmontar circuitos rapidamente.
+o	Ela é ideal para prototipagem rápida e experimentação, pois permite testar diferentes configurações e arranjos de componentes sem comprometer os componentes 
+eletrônicos.
+
+A breadboard, também conhecida como placa de prototipagem ou placa de ensaio, é uma placa de circuito sem solda que permite montar e testar circuitos eletrônicos 
+temporários de forma rápida e intuitiva. Ela é composta por uma matriz de furos condutores interligados, nos quais os componentes eletrônicos podem ser inseridos 
+e conectados entre si.
+
